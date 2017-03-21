@@ -42,7 +42,7 @@ public class ApiValidatorExceptionHandler {
      * @return
      */
     @ExceptionHandler(value = Exception.class)
-    @ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)
+    @ResponseStatus(HttpStatus.BAD_REQUEST)
     @ResponseBody
     public ResponseEntity<Object> handleException(Exception error) {
         logger.error("Erro não tratado: " + error, error);

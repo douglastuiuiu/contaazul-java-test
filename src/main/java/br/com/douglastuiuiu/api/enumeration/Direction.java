@@ -5,5 +5,15 @@ package br.com.douglastuiuiu.api.enumeration;
  * @since 20/03/2017
  */
 public enum Direction {
-    NORTH, SOUTH, EAST, WEST
+    NORTH("N"), SOUTH("S"), EAST("E"), WEST("W");
+
+    Direction(String value) {
+        this.value = value;
+    }
+
+    private final String value;
+
+    public String getValue() {
+        return value;
+    }
 }

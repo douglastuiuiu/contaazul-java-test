@@ -1,6 +1,5 @@
 package br.com.douglastuiuiu.api.util;
 
-import br.com.douglastuiuiu.api.validation.model.ErrorModel;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 
@@ -21,8 +20,7 @@ public class ApiUtil {
      * @return
      */
     public static ResponseEntity<Object> responseError(String message, HttpStatus status) {
-        ErrorModel body = new ErrorModel(message);
-        return new ResponseEntity<>(body, status);
+        return new ResponseEntity<>(message, status);
     }
 
 }

@@ -5,5 +5,15 @@ package br.com.douglastuiuiu.api.enumeration;
  * @since 20/03/2017
  */
 public enum CommandType {
-    M, L, R
+    MOVE("M"), LEFT("L"), RIGHT("R");
+
+    CommandType(String value) {
+        this.value = value;
+    }
+
+    private final String value;
+
+    public String getValue() {
+        return value;
+    }
 }
